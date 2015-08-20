@@ -1,0 +1,19 @@
+<h1>INDEX</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="card">
+          <span class="card-bg" style="background-image: url('old_fashioned.jpg')"></span>
+          <span class="card-shadow"></span>
+          <span class="card-text">
+            <h2><%= cocktail.name %></h2>
+          </span>
+          <a href="#" class="card-link"></a>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
