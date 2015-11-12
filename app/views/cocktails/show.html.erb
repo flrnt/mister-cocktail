@@ -8,5 +8,17 @@
   </div>
 </div>
 
-<%= link_to "back", cocktails_path %>
+<hr>
 
+<h2>List of ingredients</h2>
+<ul>
+  <li>
+    <% @doses.each do |dose| %>
+      <%= dose.ingredient.name %> (<%= dose.description %>)
+    <% end %>
+  </li>
+</ul>
+
+<br><br>
+
+<%= link_to "back", cocktails_path %>
