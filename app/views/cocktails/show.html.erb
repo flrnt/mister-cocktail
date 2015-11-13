@@ -4,20 +4,27 @@
     <div class="col-xs-12">
       <h1><%= @cocktail.name %></h1>
       <%= image_tag @cocktail.picture, class: "card" %>
+      <hr>
+
+      <h2>
+        Ingredients
+        <%= link_to new_cocktail_dose_path(@cocktail) do %>
+          <i class="fa fa-plus-square"></i>
+        <% end %>
+      </h2>
+      <ul>
+        <% @doses.each do |dose| %>
+          <li>
+            <%= dose.ingredient.name %> (<%= dose.description %>)
+            <%= link_to "supp", cocktail_dose_path(@cocktail, dose), method: :delete %>
+          </li>
+        <% end %>
+      </ul>
     </div>
   </div>
 </div>
 
-<hr>
 
-<h2>List of ingredients</h2>
-<ul>
-  <li>
-    <% @doses.each do |dose| %>
-      <%= dose.ingredient.name %> (<%= dose.description %>)
-    <% end %>
-  </li>
-</ul>
 
 <br><br>
 

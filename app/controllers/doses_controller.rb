@@ -18,7 +18,6 @@ class DosesController < ApplicationController
   def destroy # DELETE /cocktails/:cocktail_id/doses/:id
     @dose = Dose.find(params[:id])
     @dose.destroy
-    raise
     redirect_to cocktail_path(@cocktail)
   end
 

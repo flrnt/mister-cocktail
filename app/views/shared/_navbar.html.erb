@@ -1,15 +1,9 @@
-<nav class="navbar-wagon">
-  <div class="container navbar-wagon-container">
+<nav class="navbar">
 
-    <a href="/">
-      <img src="http://placehold.it/50x50" alt="" class="navbar-wagon-logo">
-    </a>
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search for cocktails">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
-    <%= link_to "Create cocktail", new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
-  </div>
+    <%= link_to(root_path) do %>
+      <%= image_tag("https://cdn0.iconfinder.com/data/icons/food-icons-rounded/110/Cocktail-512.png", class:"navbar-logo") %>
+    <% end %>
+
+    <%= link_to "Create cocktail", new_cocktail_path, class:"navbar-btn" %>
+
 </nav>
